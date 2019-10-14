@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i|Roboto:900&display=swap');
+
+html {
+  /* ---- CSS CUSTOM PROPERTIES ---- */
+
+  /* Background colours */
+  --primary-a: #6200ee;
+  --primary-b: #3700b3;
+  --secondary-a: #03dac6;
+  --secondary-b: #018786;
+  --background: #ffffff;
+  --error: #b00020;
+
+  /* Foreground colours */
+  --on-primary: #ffffff;
+  --on-secondary: #000000;
+  --on-background: #222222;
+  --on-error: #ffffff;
+
+  /* Fonts */
+  --font-standard: 'PT Serif', georgia, serif;
+  --font-impact: 'Roboto', helvetica, arial, sans-serif;
+}
+
+
+body {
+  background-color: var(--background);
+  color: var(--on-background);
+  font: normal normal 1em/1.5 var(--font-standard);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-impact);
+  font-weight: 900;
+}
+/* h2 {
+  text-transform: uppercase;
+} */
+
+a {
+  background-color: var(--primary-a);
+  color: var(--on-primary);
+  transition: all 0.4s;
+}
+a:hover {
+  background-color: var(--secondary-a);
+}
+
+
+.upper {
+  text-transform: uppercase;
+}
+.underline {
+  border-bottom: 0.25em solid black;
+}
+.introbar {
+  background-color: var(--secondary-a);
+  color: var(--on-secondary);
+}
+.closingbar {
+  background-color: var(--secondary-a);
+  color: var(--on-secondary);
+}
+
+
+
+
+/*
+To review:
+- Setup
+- Combo selectors
+- Resets
+- Style Guide + Custom Properties
+- Minimalist
+*/
+dt, dd {
+  margin: 0;
+}
+.topics :nth-child(4n+1), .topics :nth-child(4n+2) {
+  background-color: lightgrey;
+}
+@media screen and (min-width: 600px) {
+  .topics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.support {
+  width: 4em;
+  height: 4em;
+  background-color: var(--secondary-a);
+  color: var(--on-secondary);
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 1em rgba(0,0,0,0.4);
+  text-align: center;
+  line-height: 1em;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  position: fixed;
+  top: 5em;
+  right: 1em;
+  z-index: 1;
+}
+.support:hover {
+  transform: scale(1.2);
+}
