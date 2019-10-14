@@ -6,3 +6,12 @@ Looked at the GBC website. Got some ideas.
 ## Layout Screenshot Inspiration
 
 ![GBC Screenshot](img/gbc-screenshot.png?raw=true "GBC Screenshot")
+
+## Content List
+
+- Header
+  - Logo
+  - Menu
+  - Button
+- Body
+- Footer
